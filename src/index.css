@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #18181b;
+  --color-surface-alt: #1e1e24;
+  --color-bg: #09090b;
+  --color-accent: #a78bfa;
+  --color-accent-dim: #7c3aed;
+  --color-suno-orange: #f97316;
+  --color-blob-orange: #e67e22;
+  --color-blob-border: #c0392b;
+  --color-corrected-green: #10b981;
+  --color-contour-red: #ef4444;
+  --color-selected-yellow: #f59e0b;
+  --color-grid-line: #2a2a4a;
+  --color-grid-line-dim: #1a1a3a;
+  --color-white-key: #16213e;
+  --color-black-key: #1a1a2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: #f4f4f5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
