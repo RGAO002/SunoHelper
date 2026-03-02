@@ -21,7 +21,6 @@ self.onmessage = (e: MessageEvent<AnalysisWorkerInput>) => {
   try {
     const { channelData, sampleRate } = e.data
 
-    // Step 1: Pitch detection
     self.postMessage({
       type: 'progress',
       progress: 0.1,
@@ -36,7 +35,6 @@ self.onmessage = (e: MessageEvent<AnalysisWorkerInput>) => {
       frames,
     } satisfies AnalysisWorkerOutput)
 
-    // Step 2: Note segmentation
     const segmenter = new NoteSegmenter()
     const notes = segmenter.segment(frames, sampleRate)
 
@@ -45,7 +43,6 @@ self.onmessage = (e: MessageEvent<AnalysisWorkerInput>) => {
       progress: 0.9,
     } satisfies AnalysisWorkerOutput)
 
-    // Step 3: Complete
     self.postMessage({
       type: 'complete',
       notes,
