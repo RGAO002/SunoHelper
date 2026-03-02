@@ -80,11 +80,11 @@ export function InteractionLayer({
   )
 
   const handleMouseUp = useCallback(
-    (e: React.MouseEvent<HTMLCanvasElement>) => {
+    () => {
       if (isSeeking) {
         setIsSeeking(false)
       } else {
-        handlers.onMouseUp(e as unknown as React.MouseEvent)
+        handlers.onMouseUp()
       }
     },
     [isSeeking, handlers],

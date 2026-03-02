@@ -75,7 +75,6 @@ export async function shiftSegment(
   const extendedData = new Float32Array(extendedLen)
 
   // Copy real audio: pre-context + segment + post-context
-  const realLen = preContextLen + segmentLength + postContextLen
   extendedData.set(channelData.subarray(preStart, postEnd), 0)
   // Remaining FLUSH_PADDING samples stay as zeros (silence)
 
