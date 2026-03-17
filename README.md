@@ -9,7 +9,7 @@ No backend, no install. Record or import audio, edit pitch visually, and export 
 
 - **Record / Import / Demo**
   - Record from the microphone or import local files (WAV, MP3, FLAC, OGG, M4A, etc.)
-  - “Try Demo” loads sample audio so you can try it without a mic
+  - “Try Demo” loads sample audio so you could try it without a mic
 
 - **Pitch detection**
   - Real-time pitch detection using the McLeod Pitch Method ([pitchy](https://github.com/nicklockwood/pitchy))
